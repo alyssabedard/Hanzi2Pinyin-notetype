@@ -1,0 +1,1 @@
+# Hanzi2Ruby-notetype
