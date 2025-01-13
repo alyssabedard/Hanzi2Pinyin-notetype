@@ -1,6 +1,10 @@
 <div align="center">
 <h1 style="font-family: monospace;">Hanzi2Ruby-notetype</h1>
+<!-- GitHub Release --><a href="https://github.com/alyssabedard/Hanzi2Ruby-notetype/releases"><img src="https://img.shields.io/github/v/release/alyssabedard/Hanzi2Ruby-notetype?style=for-the-badge&labelColor=%231C1C1C&color=%23A692E3&logo=github" /></a>
+
+<pre>
 Note type for <a href="https://github.com/alyssabedard/Hanzi2Ruby" style="color: #9B83D5;">Hanzi2Ruby</a>
+</pre>
 </div>
 
 Really basic [Anki](https://apps.ankiweb.net/) note type to see ruby characters (pinyin, zhuyin, etc...) above chinese characters (hanzi).
