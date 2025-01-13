@@ -25,14 +25,14 @@ jobs:
       - name: Create Package
         run: |
           mkdir -p build/Hanzi2Ruby-NoteType
-          cp -r Hanzi2Ruby/* build/Hanzi2Ruby-NoteType/
+          cp -r Hanzi2Ruby/note_type/* build/Hanzi2Ruby-NoteType/
           cd build
-          zip -r "../Hanzi2Ruby-NoteType${GITHUB_REF#refs/tags/v}.zip" Hanzi2Ruby-NoteType/
+          zip -r "../Hanzi2Ruby-NoteType_${GITHUB_REF#refs/tags/v}.zip" Hanzi2Ruby-NoteType/
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
-          files: Hanzi2Ruby_${{ steps.get_version.outputs.VERSION }}.zip
+          files: Hanzi2Ruby-NoteType_${{ steps.get_version.outputs.VERSION }}.zip
           body_path: CHANGELOG.md
           generate_release_notes: true
         env:
