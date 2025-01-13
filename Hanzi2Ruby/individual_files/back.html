@@ -1,0 +1,36 @@
+{{FrontSide}}
+
+<hr id=answer>
+
+<!-- Sentence Card -->
+<div class="sentence-card">
+    {{#IsSentenceCard}}
+
+    <div lang="zh-Hans" class="audio-card">
+        {{SentenceAudio}}
+        {{ExpressionAudio}}
+    </div>
+
+    {{/IsSentenceCard}}
+</div>
+
+<!-- Audio Card -->
+<div class="sentence-card">
+    {{^IsSentenceCard}}
+    <div lang="zh-Hans" class="sentence-pinyin hanzi-ruby" id="sentence-toggle">
+        {{furigana:SentencePinyin}}
+    </div>
+    <button class="btn" onclick="toggleRuby()">Toggle Pinyin</button>
+
+    {{/IsSentenceCard}}
+</div>
+
+<div>
+    <div id="image">{{Image}}</div>
+    <div id="translation">{{Translation}}</div>
+    <br>
+    <div id="definition">{{Definition}}</div>
+    <br>
+    <div id="source">{{Source}}</div>
+    <div id="notes">{{Notes}}</div>
+</div>
