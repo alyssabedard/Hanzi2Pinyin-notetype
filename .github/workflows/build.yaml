@@ -2,7 +2,7 @@
 #   1. It checks out the code at the commit where the tag was created
 #   2. Creates the build package using the latest state (with updated metadata)
 
-name: Build Hanzi2Ruby Package
+name: Build Hanzi2Ruby Note Type Package
 
 on:
   push:
@@ -24,10 +24,10 @@ jobs:
 
       - name: Create Package
         run: |
-          mkdir -p build/Hanzi2Ruby
-          cp -r addon/* build/Hanzi2Ruby/
+          mkdir -p build/Hanzi2Ruby-NoteType
+          cp -r Hanzi2Ruby/* build/Hanzi2Ruby-NoteType/
           cd build
-          zip -r "../Hanzi2Ruby_${GITHUB_REF#refs/tags/v}.zip" Hanzi2Ruby/
+          zip -r "../Hanzi2Ruby-NoteType${GITHUB_REF#refs/tags/v}.zip" Hanzi2Ruby-NoteType/
 
       - name: Create Release
         uses: softprops/action-gh-release@v2

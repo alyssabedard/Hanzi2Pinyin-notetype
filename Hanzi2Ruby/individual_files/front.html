@@ -2,10 +2,10 @@
 ╭────────────────────────────────────────────────╮
 │        Hanzi2Ruby - Anki Note Type             │
 │                                                │
-│     Bugs/Suggestions? Ope/push an issue/PR     │
+│               Bugs/Suggestions?                │
 │  github.com/alyssabedard/Hanzi2Ruby-notetype   │
 │                                                │
-│                    2025                        │
+│                    💜 2025                     │
 ╰────────────────────────────────────────────────╯
 -->
 
@@ -36,44 +36,29 @@
 </div>
 
 <script>
-    // Expression highlighting
-
-    // Wait 100ms before executing to ensure DOM is fully loaded with Anki fields
     window.setTimeout(function() {
-        // Get the container element with sentence and ruby text
+        // Get sentence container and Expression text
         let sentenceDiv = document.getElementById('sentence-toggle');
-        // Get the text from Anki's Expression field and remove whitespace
         let expressionText = "{{Expression}}".trim();
 
-        // Only proceed if both the container and expression exist
+        // Process if container and expression exist
         if (sentenceDiv && expressionText) {
-            // Get all ruby elements in the sentence
-            // Ruby elements are used for showing pronunciation above characters
             let rubyChar = sentenceDiv.getElementsByTagName('ruby');
 
-            // Loop through each ruby element
+            // Highlight matching characters in Expression
             for (let i = 0; i < rubyChar.length; i++) {
-                // Get the base character (the actual hanzi)
-                // firstChild gives us the text node before the rt (ruby text) element
                 let char = rubyChar[i].firstChild.textContent;
-
-                // If this character appears in our Expression field
                 if (expressionText.includes(char)) {
-                    // Highlight it by changing color to purple
-                    rubyChar[i].style.color = '#b79cf4';
-                    // Make it bold for emphasis
+                    rubyChar[i].style.color = '#b79cf4'; // CHANGE PURPLE COLOR HERE :)
                     rubyChar[i].style.fontWeight = 'bold';
                 }
             }
         }
     }, 100);  // 100ms delay
 
-    // Function to toggle display of ruby text
+    // Toggle ruby text display
     function toggleRuby() {
-        // Get the sentence container
         let sentenceDiv = document.getElementById('sentence-toggle');
-        // Toggle the 'show-all-ruby' class
-        // This class is presumably defined in CSS to control ruby text visibility
         sentenceDiv.classList.toggle('show-all-ruby');
     }
 </script>

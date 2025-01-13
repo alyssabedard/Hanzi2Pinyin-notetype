@@ -2,7 +2,7 @@
 
 <hr id=answer>
 
-<!-- Sentence Card -->
+<!-- If front is Sentence Card, show Audio -->
 <div class="sentence-card">
     {{#IsSentenceCard}}
 
@@ -14,7 +14,7 @@
     {{/IsSentenceCard}}
 </div>
 
-<!-- Audio Card -->
+<!-- If front is Audio Card, show Sentence with Pinyin -->
 <div class="sentence-card">
     {{^IsSentenceCard}}
     <div lang="zh-Hans" class="sentence-pinyin hanzi-ruby" id="sentence-toggle">
@@ -29,7 +29,7 @@
     <div id="image">{{Image}}</div>
     <div id="translation">{{Translation}}</div>
     <br>
-    <div id="definition">{{Definition}}</div>
+    <div align="left" id="definition">{{Definition}}</div>
     <br>
     <div id="source">{{Source}}</div>
     <div id="notes">{{Notes}}</div>

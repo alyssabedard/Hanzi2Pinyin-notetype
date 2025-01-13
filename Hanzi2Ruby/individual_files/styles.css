@@ -1,0 +1,57 @@
+.card {
+    font-family: arial;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    background-color: white;
+}
+
+
+
+/*****************************
+* Sentence and SentencePinyin
+******************************/
+
+/* Style for Chinese characters */
+.hanzi-ruby  {
+    /*font-family: "STFangsong"; */
+    font-family: "Kai", "楷体", serif;
+    font-size: 46px;
+
+}
+
+
+/* Style for pinyin ruby only */
+ruby rt {
+    font-family: "Arial", sans-serif;
+    font-size: 0.4em; /* 40% of parent size (30px × 0.4 = 12px) */
+    user-select: none;
+    opacity: 0;
+    font-style: italic;
+}
+
+/* Show pinyin on hover  */
+.hanzi-ruby ruby:hover rt {
+    opacity: 1;
+}
+
+
+/* Show all ruby text */
+.show-all-ruby rt {
+    opacity: 1 !important;
+}
+
+
+/*****************************
+* Translation, Notes, source
+******************************/
+
+#translation, #notes, #source {
+    font-style: italic;
+}
+
+#notes, #source {
+    font-style: italic;
+    font-size: 16px;
+}
+
