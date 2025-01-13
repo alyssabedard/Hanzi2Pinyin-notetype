@@ -22,8 +22,8 @@ Really basic [Anki](https://apps.ankiweb.net/) note type to see ruby characters 
 ## Usage
 🚧 Documentation for non-technical users coming soon, please also  read [Hanzi2Pinyin](https://github.com/alyssabedard/Hanzi2Pinyin)
 
-- Anki Note type (.apkg) under [Hanzi2Pinyin/note_type/](HanziPinyin/note_type)
-- Individual files (html and css) under [Hanzi2Pinyin/individual_files/](HanziPinyin/individual_files)
+- Anki Note type (.apkg) under [Hanzi2Pinyin/note_type/](Hanzi2Pinyin/note_type)
+- Individual files (html and css) under [Hanzi2Pinyin/individual_files/](Hanzi2Pinyin/individual_files)
 
 
 ##  Features
