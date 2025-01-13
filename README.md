@@ -1,9 +1,9 @@
 <div align="center">
-<h1 style="font-family: monospace;">Hanzi2Ruby-notetype</h1>
-<!-- GitHub Release --><a href="https://github.com/alyssabedard/Hanzi2Ruby-notetype/releases"><img src="https://img.shields.io/github/v/release/alyssabedard/Hanzi2Ruby-notetype?style=for-the-badge&labelColor=%231C1C1C&color=%23A692E3&logo=github" /></a>
+<h1 style="font-family: monospace;">Hanzi2Pinyin-notetype</h1>
+<!-- GitHub Release --><a href="https://github.com/alyssabedard/Hanzi2Pinyin-notetype/releases"><img src="https://img.shields.io/github/v/release/alyssabedard/Hanzi2Pinyin-notetype?style=for-the-badge&labelColor=%231C1C1C&color=%23A692E3&logo=github" /></a>
 
 <pre>
-Note type for <a href="https://github.com/alyssabedard/Hanzi2Ruby" style="color: #9B83D5;">Hanzi2Ruby</a>
+Note type for <a href="https://github.com/alyssabedard/Hanzi2Pinyin" style="color: #9B83D5;">Hanzi2Pinyin</a>
 </pre>
 </div>
 
@@ -20,10 +20,10 @@ Really basic [Anki](https://apps.ankiweb.net/) note type to see ruby characters 
 
 
 ## Usage
-🚧 Documentation for non-technical users coming soon, please also  read [Hanzi2Ruby](https://github.com/alyssabedard/Hanzi2Ruby)
+🚧 Documentation for non-technical users coming soon, please also  read [Hanzi2Pinyin](https://github.com/alyssabedard/Hanzi2Pinyin)
 
-- Anki Note type (.apkg) under [Hanzi2Ruby/note_type/](Hanzi2Ruby/note_type)
-- Individual files (html and css) under [Hanzi2Ruby/individual_files/](Hanzi2Ruby/individual_files)
+- Anki Note type (.apkg) under [Hanzi2Pinyin/note_type/](HanziPinyin/note_type)
+- Individual files (html and css) under [Hanzi2Pinyin/individual_files/](HanziPinyin/individual_files)
 
 
 ##  Features
@@ -54,7 +54,8 @@ Really basic [Anki](https://apps.ankiweb.net/) note type to see ruby characters 
 
 | Type                                                                            | Description                     |
 |---------------------------------------------------------------------------------|---------------------------------|
-| [Issues & Requests](https://github.com/alyssabedard/Hanzi2Ruby-notetype/issues) | Bug reports or feature requests | 
+| [Issues & Requests](https://github.com/alyssabedard/Hanzi2Pinyin-notetype/issues) | Bug reports or feature requests | 
 | [Contributing](.github/CONTRIBUTING.md)                                         | Fork the repo and submit a PR   |
-| [Discussions](https://github.com/alyssabedard/Hanzi2Ruby-notetype/discussions)  | Getting help and questions      |
+| [Discussions](https://github.com/alyssabedard/Hanzi2Pinyin-notetype/discussions)  | Getting help and questions      |
 | [Support](.github/SUPPORT.md)                                                   | Support - Getting Started       |
+

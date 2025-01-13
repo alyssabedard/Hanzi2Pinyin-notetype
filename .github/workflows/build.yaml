@@ -2,7 +2,7 @@
 #   1. It checks out the code at the commit where the tag was created
 #   2. Creates the build package using the latest state (with updated metadata)
 
-name: Build Hanzi2Ruby Note Type Package
+name: Build Hanzi2Pinyin Note Type Package
 
 on:
   push:
@@ -24,16 +24,16 @@ jobs:
 
       - name: Create Package
         run: |
-          mkdir -p build/Hanzi2Ruby-NoteType
-          cp -r Hanzi2Ruby/note_type/* build/Hanzi2Ruby-NoteType/
+          mkdir -p build/Hanzi2Pinyin-NoteType
+          cp -r Hanzi2Pinyin/note_type/* build/Hanzi2Pinyin-NoteType/
           cd build
-          zip -r "../Hanzi2Ruby-NoteType_${GITHUB_REF#refs/tags/v}.zip" Hanzi2Ruby-NoteType/
+          zip -r "../Hanzi2Pinyin-NoteType_${GITHUB_REF#refs/tags/v}.zip" Hanzi2Pinyin-NoteType/
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
-          name: Hanzi2Ruby-NoteType v${{ steps.get_version.outputs.VERSION }}
-          files: Hanzi2Ruby-NoteType_${{ steps.get_version.outputs.VERSION }}.zip
+          name: Hanzi2Pinyin-NoteType v${{ steps.get_version.outputs.VERSION }}
+          files: Hanzi2Pinyin-NoteType_${{ steps.get_version.outputs.VERSION }}.zip
           body_path: CHANGELOG.md
           generate_release_notes: true
         env:

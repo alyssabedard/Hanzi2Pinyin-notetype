@@ -25,7 +25,7 @@ Screenshots If applicable, add screenshots to help explain your problem.
 **System Information:**
 - OS: [e.g. macOS, Linux, Windows]
 - Anki version: [e.g. 24.11]
-- Hanzi2Ruby version [e.g. 1.1.0]
+- Hanzi2Pinyin version [e.g. 1.1.0]
 
 
 **Additional context**
