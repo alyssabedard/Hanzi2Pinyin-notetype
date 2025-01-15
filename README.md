@@ -11,10 +11,6 @@ Really basic [Anki](https://apps.ankiweb.net/) note type to see ruby characters 
 
 <div align="center" style="display: flex; justify-content: center; gap: 20px;">
     <img src="docs/screenshots/demo-liuqi.gif" width="600" alt="Demo of note type in dark mode"/>
-
-[//]: # (    <img src="docs/screenshots/demo-dark.gif" width="600" alt="Demo of note type in dark mode"/>)
-
-[//]: # (    <img src="docs/screenshots/demo-light.gif" width="600" alt="Demo of note type in light mode"/>)
 </div>
 
 
@@ -22,8 +18,36 @@ Really basic [Anki](https://apps.ankiweb.net/) note type to see ruby characters 
 ## Usage
 🚧 Documentation for non-technical users coming soon, please also  read [Hanzi2Pinyin](https://github.com/alyssabedard/Hanzi2Pinyin)
 
-- Anki Note type (.apkg) under [Hanzi2Pinyin/note_type/](Hanzi2Pinyin/note_type)
-- Individual files (html and css) under [Hanzi2Pinyin/individual_files/](Hanzi2Pinyin/individual_files)
+1. Download Note type or use the individual files:
+   - Anki Note type (.apkg) can be found [here](https://github.com/alyssabedard/Hanzi2Pinyin-notetype/releases) _(first zip file)_
+     - or under [Hanzi2Pinyin/note_type/](Hanzi2Pinyin/note_type)
+   - Individual files (html and css) under [Hanzi2Pinyin/individual_files/](Hanzi2Pinyin/individual_files)
+2. Download the [Hanzi2Pinyin](https://ankiweb.net/shared/info/77106192) add-on to Anki
+
+
+### Fonts
+Make changes according to your preferences 
+```
+/* Style for Chinese characters */
+.hanzi-ruby  {
+    /*font-family: "STFangsong"; */
+    font-family: "KaiTi", "楷体", /* Windows Chinese names */
+                "STKaiti", /* macOS */
+                "NSimSun", "新宋体", /* Windows */
+                "Noto Sans CJK SC", /* Linux/Android */
+                "WenQuanYi Zen Hei",
+                "DroidSansFallback",
+                "Microsoft YaHei", /* Windows fallback */
+                serif;
+    font-size: 46px;
+}
+
+```
+<br>
+<div align="center" style="display: flex; justify-content: center; gap: 20px;">
+<img src="docs/screenshots/demo-styling.png" width="800" alt="Demo of note type in dark mode"/>
+</div>
+
 
 
 ##  Features
@@ -52,10 +76,10 @@ Really basic [Anki](https://apps.ankiweb.net/) note type to see ruby characters 
 
 ## Contributing & Support
 
-| Type                                                                            | Description                     |
-|---------------------------------------------------------------------------------|---------------------------------|
+| Type                                                                              | Description                     |
+|-----------------------------------------------------------------------------------|---------------------------------|
 | [Issues & Requests](https://github.com/alyssabedard/Hanzi2Pinyin-notetype/issues) | Bug reports or feature requests | 
-| [Contributing](.github/CONTRIBUTING.md)                                         | Fork the repo and submit a PR   |
+| [Contributing](.github/CONTRIBUTING.md)                                           | Fork the repo and submit a PR   |
 | [Discussions](https://github.com/alyssabedard/Hanzi2Pinyin-notetype/discussions)  | Getting help and questions      |
-| [Support](.github/SUPPORT.md)                                                   | Support - Getting Started       |
+| [Support](.github/SUPPORT.md)                                                     | Support - Getting Started       |
 

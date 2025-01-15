@@ -6,8 +6,6 @@
     background-color: white;
 }
 
-
-
 /*****************************
 * Sentence and SentencePinyin
 ******************************/
@@ -15,9 +13,15 @@
 /* Style for Chinese characters */
 .hanzi-ruby  {
     /*font-family: "STFangsong"; */
-    font-family: "Kai", "楷体", serif;
+    font-family: "KaiTi", "楷体", /* Windows Chinese names */
+                "STKaiti", /* macOS */
+                "NSimSun", "新宋体", /* Windows */
+                "Noto Sans CJK SC", /* Linux/Android */
+                "WenQuanYi Zen Hei",
+                "DroidSansFallback",
+                "Microsoft YaHei", /* Windows fallback */
+                serif;
     font-size: 46px;
-
 }
 
 
