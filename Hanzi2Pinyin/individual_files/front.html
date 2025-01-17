@@ -4,59 +4,72 @@
 │                                                │
 │               Bugs/Suggestions?                │
 │  github.com/alyssabedard/Hanzi2Ruby-notetype   │
-│                      v.1.1.0                   │
+│                      v.1.2.0                   │
 │                    💜 2025                     │
 ╰────────────────────────────────────────────────╯
 -->
 
-<!-- Front Template -->
+<!--****************************
+* FRONT TEMPLATE
+* Main structure for the front side of the card
+*****************************-->
 
-<!-- Sentence Card -->
+<!--****************************
+* SENTENCE CARD SECTION
+* Shows when IsSentenceCard is true (if it has any text)
+* Displays Chinese text with pinyin ruby
+*****************************-->
 <div class="sentence-card">
     {{#IsSentenceCard}}
-
+    <!-- Chinese sentence with pinyin/zhuyin readings -->
     <div lang="zh-Hans" class="sentence-pinyin hanzi-ruby" id="sentence-toggle">
         {{furigana:SentencePinyin}}
     </div>
 
-
+    <!-- Pinyin toggle button -->
     <button class="btn" onclick="toggleRuby()">Toggle Pinyin</button>
-
     {{/IsSentenceCard}}
 </div>
 
-
-<!-- Audio Card -->
+<!--****************************
+* AUDIO CARD SECTION
+* Shows when IsSentenceCard is false
+* Displays audio player only
+*****************************-->
 <div class="audio-card">
     {{^IsSentenceCard}}
-
+    <!-- Audio player for sentence -->
     {{SentenceAudio}}
-
     {{/IsSentenceCard}}
 </div>
 
+<!--****************************
+* JAVASCRIPT
+* Handles character highlighting and pinyin toggle
+*****************************-->
 <script>
+    // Character Highlighting Function
     window.setTimeout(function() {
-        // Get sentence container and Expression text
+        // Get elements
         let sentenceDiv = document.getElementById('sentence-toggle');
         let expressionText = "{{Expression}}".trim();
 
-        // Process if container and expression exist
+        // Process if elements exist
         if (sentenceDiv && expressionText) {
             let rubyChar = sentenceDiv.getElementsByTagName('ruby');
 
-            // Highlight matching characters in Expression
+            // Highlight characters that match Expression
             for (let i = 0; i < rubyChar.length; i++) {
                 let char = rubyChar[i].firstChild.textContent;
                 if (expressionText.includes(char)) {
-                    rubyChar[i].style.color = '#b79cf4'; // CHANGE PURPLE COLOR HERE :)
-                    rubyChar[i].style.fontWeight = 'bold';
+                    rubyChar[i].style.color = '#b79cf4';    // Purple highlight color
+                    rubyChar[i].style.fontWeight = 'bold';   // Bold matching characters
                 }
             }
         }
-    }, 100);  // 100ms delay
+    }, 100);  // Small delay to ensure DOM is ready
 
-    // Toggle ruby text display
+    // Pinyin Toggle Function
     function toggleRuby() {
         let sentenceDiv = document.getElementById('sentence-toggle');
         sentenceDiv.classList.toggle('show-all-ruby');

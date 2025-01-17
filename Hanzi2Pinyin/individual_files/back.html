@@ -1,37 +1,83 @@
+<!--****************************
+* FRONT SIDE CONTENT
+* This includes all content from the front of the card
+*****************************-->
 {{FrontSide}}
 
-<hr id=answer>
+<!--****************************
+* ANSWER DIVIDER
+* Horizontal line separating front and back
+*****************************-->
+<hr id="answer">
 
-<!-- If front is Sentence Card, show Audio -->
+<!--****************************
+* AUDIO SECTION
+* Shows audio for Sentence Cards only
+* Wrapped in conditional IsSentenceCard
+*****************************-->
 <div class="sentence-card">
     {{#IsSentenceCard}}
-
     <div lang="zh-Hans" class="audio-card">
+        <!-- Sentence and expression audio players -->
         {{SentenceAudio}}
         {{ExpressionAudio}}
     </div>
-
     {{/IsSentenceCard}}
 </div>
 
-<!-- If front is Audio Card, show Sentence with Pinyin -->
+<!--****************************
+* SENTENCE WITH PINYIN
+* Shows for Audio Cards only (inverse of IsSentenceCard)
+* Includes toggle button for pinyin display
+*****************************-->
 <br>
 <div class="sentence-card">
     {{^IsSentenceCard}}
+    <!-- Chinese sentence with pinyin ruby text -->
     <div lang="zh-Hans" class="sentence-pinyin hanzi-ruby" id="sentence-toggle">
         {{furigana:SentencePinyin}}
     </div>
-    <button class="btn" onclick="toggleRuby()">Toggle Pinyin</button>
-
     {{/IsSentenceCard}}
 </div>
 
+<!--****************************
+* PINYIN TOGGLE BUTTON
+* Button to show/hide pinyin readings
+*****************************-->
 <div>
-    <div id="image">{{Screenshot}}</div>
-    <div id="translation">{{Translation}}</div>
+    <button class="btn" onclick="toggleRuby()">Toggle Pinyin</button>
+</div>
+
+<!--****************************
+* CONTENT SECTION
+* Main content including image, translation, and notes
+*****************************-->
+<br>
+<div>
+    <!-- Screenshot/Image -->
+    <div id="image">
+        {{Screenshot}}
+    </div>
+
+    <!-- English Translation -->
+    <div id="translation">
+        {{Translation}}
+    </div>
+
     <br>
-    <div align="left" id="definition">{{Definition}}</div>
+
+    <!-- Definition Section -->
+    <div align="left" id="definition">
+        {{Definition}}
+    </div>
+
     <br>
-    <div id="source">{{Source}}</div>
-    <div id="notes">{{Notes}}</div>
+
+    <!-- Source and Notes -->
+    <div id="source">
+        {{Source}}
+    </div>
+    <div id="notes">
+        {{Notes}}
+    </div>
 </div>

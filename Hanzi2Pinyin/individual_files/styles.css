@@ -1,3 +1,7 @@
+/*****************************
+* BASIC CARD STYLES
+* Customize the basic appearance of your Anki cards here
+******************************/
 .card {
     font-family: arial;
     font-size: 20px;
@@ -7,55 +11,162 @@
 }
 
 /*****************************
-* Sentence and SentencePinyin
+* CHINESE TEXT STYLES
+* Customize the appearance of Chinese characters and pinyin here
 ******************************/
-
-/* Style for Chinese characters */
-.hanzi-ruby  {
-    /*font-family: "STFangsong"; */
-    font-family: "KaiTi", "楷体", /* Windows Chinese names */
-                "STKaiti", /* macOS */
-                "NSimSun", "新宋体", /* Windows */
-                "Noto Sans CJK SC", /* Linux/Android */
+@font-face {
+    font-family: 'SourceHanSerif';
+    src: url('_SourceHanSerifSC-Medium.otf') format('opentype'); /* Inside Anki Collection media */
+    /* Optionally add weights */
+    /* font-weight: normal;*/
+    /* font-style: normal;*/
+}
+.hanzi-ruby {
+    /* Chinese font stack - adjust or add fonts as needed */
+    font-family: "SourceHanSerif", "Kai", "Kaiti SC", "KaiTi", "楷体", /* Primary Chinese fonts*/
+                "STKaiti",                           /* macOS */
+                "NSimSun", "新宋体",                  /* Windows */
+                "Noto Sans CJK SC",                  /* Linux/Android */
                 "WenQuanYi Zen Hei",
                 "DroidSansFallback",
-                "Microsoft YaHei", /* Windows fallback */
+                "Microsoft YaHei",                   /* Windows fallback */
                 serif;
     font-size: 46px;
 }
 
-
-/* Style for pinyin ruby only */
+/* Pinyin text styling */
 ruby rt {
-    font-family: "Arial", sans-serif;
-    font-size: 0.4em; /* 40% of parent size (30px × 0.4 = 12px) */
+    font-family: "Times New Roman", sans-serif;
+    font-size: 0.5em;                                   /* Adjust size of pinyin text */
+    user-select: none;
+    opacity: 0;                                         /* Hidden by default */
+    font-style: italic;
+}
+
+/* Pinyin interaction styles */
+.hanzi-ruby ruby:hover rt {
+    opacity: 1;                                         /* Show pinyin on hover */
+}
+
+.show-all-ruby rt {
+    opacity: 1 !important;                              /* Force show all pinyin */
+}
+
+/*****************************
+* RESPONSIVE CHINESE TEXT
+* Adjust Chinese text size for different screen sizes
+******************************/
+@media screen and (max-width: 480px) {
+    .sentence-pinyin {
+        font-size: 40px;                                /* Size for phones */
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .sentence-pinyin {
+        font-size: 30px;                                /* Size for small phones */
+    }
+}
+
+/*****************************
+* ENGLISH/FRENCH TRANSLATION STYLES
+* Customize the appearance of any secondary language text elements
+******************************/
+/* Bodoni font stack for English text */
+#translation, #definition, #notes, #source {
+    font-family: "Bodoni 72", "Bodoni MT", "Libre Bodoni", 
+                "TeX Gyre Termes", "Baskerville Old Face", 
+                "Baskerville", "Didot", serif;
+}
+
+/* Translation text */
+#translation {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+/* Definition section */
+#definition {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.6;
+    border-left: 3px solid #ddd;                        /* Left border indicator */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Notes and source styling */
+#notes, #source {
+    font-size: 16px;
+    font-style: italic;
+    color: #666;                                        /* Muted text color */
+    padding: 10px 0;
+    margin-top: 15px;
+    padding-top: 15px;
+}
+
+/*****************************
+* IMAGE STYLES
+* Customize how images appear in your cards
+******************************/
+#image {
+    max-width: 90%;                                     /* Responsive image width */
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+#image img {
+    max-height: 400px;                                  /* Maximum image height */
+    width: auto;
+    object-fit: contain;
+}
+
+/*****************************
+* BUTTON STYLES
+* Customize the appearance of buttons
+******************************/
+.btn {
+    color: black;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #e8e8e8;
+}
+
+.btn:active {
+    background-color: #dcdcdc;
+}
+
+/*****************************
+* OPTIONAL RUBY SPACING
+* Uncomment this section to increase space between hanzi and pinyin
+******************************/
+/*
+rt {
+    font-family: "Times New Roman", sans-serif;
+    font-size: 0.5em;
     user-select: none;
     opacity: 0;
     font-style: italic;
+    display: block;
+    transform: translateY(-0.3em);
 }
-
-/* Show pinyin on hover  */
-.hanzi-ruby ruby:hover rt {
-    opacity: 1;
-}
+*/
 
 
-/* Show all ruby text */
-.show-all-ruby rt {
-    opacity: 1 !important;
-}
-
-
-/*****************************
-* Translation, Notes, source
-******************************/
-
-#translation, #notes, #source {
-    font-style: italic;
-}
-
-#notes, #source {
-    font-style: italic;
-    font-size: 16px;
-}
 

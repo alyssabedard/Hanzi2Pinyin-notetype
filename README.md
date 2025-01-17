@@ -28,16 +28,26 @@ Really basic [Anki](https://apps.ankiweb.net/) note type to see ruby characters 
 ### Fonts
 Make changes according to your preferences 
 ```
-/* Style for Chinese characters */
-.hanzi-ruby  {
-    /*font-family: "STFangsong"; */
-    font-family: "KaiTi", "楷体", /* Windows Chinese names */
-                "STKaiti", /* macOS */
-                "NSimSun", "新宋体", /* Windows */
-                "Noto Sans CJK SC", /* Linux/Android */
+/*****************************
+* CHINESE TEXT STYLES
+* Customize the appearance of Chinese characters and pinyin here
+******************************/
+@font-face {
+    font-family: 'SourceHanSerif';
+    src: url('_SourceHanSerifSC-Medium.otf') format('opentype'); /* Inside Anki Collection media */
+    /* Optionally add weights */
+    /* font-weight: normal;*/
+    /* font-style: normal;*/
+}
+.hanzi-ruby {
+    /* Chinese font stack - adjust or add fonts as needed */
+    font-family: "SourceHanSerif", "Kai", "Kaiti SC", "KaiTi", "楷体", /* Primary Chinese fonts*/
+                "STKaiti",                           /* macOS */
+                "NSimSun", "新宋体",                  /* Windows */
+                "Noto Sans CJK SC",                  /* Linux/Android */
                 "WenQuanYi Zen Hei",
                 "DroidSansFallback",
-                "Microsoft YaHei", /* Windows fallback */
+                "Microsoft YaHei",                   /* Windows fallback */
                 serif;
     font-size: 46px;
 }
@@ -83,3 +93,5 @@ Make changes according to your preferences
 | [Discussions](https://github.com/alyssabedard/Hanzi2Pinyin-notetype/discussions)  | Getting help and questions      |
 | [Support](.github/SUPPORT.md)                                                     | Support - Getting Started       |
 
+## Acknowledgement
+- [Source Han Serif](https://source.typekit.com/source-han-serif/?scid=social71226596) - An open source Pan-CJK typeface ([GitHub](https://github.com/adobe-fonts/source-han-serif))
