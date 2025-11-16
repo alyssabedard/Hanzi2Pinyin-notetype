@@ -1,52 +1,51 @@
-<!--****************************
+<!--************************************
 * FRONT SIDE CONTENT
 * This includes all content from the front of the card
-*****************************-->
+*************************************-->
 {{FrontSide}}
 
-<!--****************************
-* ANSWER DIVIDER
-* Horizontal line separating front and back
-*****************************-->
+<!-- Horizontal line separating front and back -->
 <hr id="answer">
 
 <!--****************************
 * AUDIO SECTION
-* Shows audio for Sentence Cards only
-* Wrapped in conditional IsSentenceCard
+* Shows audio for Sentence Cards only (if IsSentenceCard is true)
 *****************************-->
+{{#IsSentenceCard}}
 <div class="sentence-card">
-    {{#IsSentenceCard}}
     <div lang="zh-Hans" class="audio-card">
         <!-- Sentence and expression audio players -->
         {{SentenceAudio}}
         {{ExpressionAudio}}
     </div>
-    {{/IsSentenceCard}}
 </div>
+{{/IsSentenceCard}}
 
 <!--****************************
 * SENTENCE WITH PINYIN
-* Shows for Audio Cards only (inverse of IsSentenceCard)
+* Shows for Audio Cards only (if IsSentenceCard is false)
 * Includes toggle button for pinyin display
 *****************************-->
-<br>
+{{^IsSentenceCard}}
 <div class="sentence-card">
-    {{^IsSentenceCard}}
+
     <!-- Chinese sentence with pinyin ruby text -->
     <div lang="zh-Hans" class="sentence-pinyin hanzi-ruby" id="sentence-toggle">
         {{furigana:SentencePinyin}}
     </div>
-    {{/IsSentenceCard}}
+
 </div>
+{{/IsSentenceCard}}
 
 <!--****************************
 * PINYIN TOGGLE BUTTON
 * Button to show/hide pinyin readings
 *****************************-->
+{{^IsSentenceCard}}
 <div>
     <button class="btn" onclick="toggleRuby()">Toggle Pinyin</button>
 </div>
+{{/IsSentenceCard}}
 
 <!--****************************
 * CONTENT SECTION
@@ -59,7 +58,7 @@
         {{Screenshot}}
     </div>
 
-    <!-- English Translation -->
+    <!-- Translation -->
     <div id="translation">
         {{Translation}}
     </div>

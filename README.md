@@ -16,7 +16,7 @@ Really basic [Anki](https://apps.ankiweb.net/) note type to see ruby characters 
 
 
 ## Usage
-🚧 Documentation for non-technical users coming soon, please also  read [Hanzi2Pinyin](https://github.com/alyssabedard/Hanzi2Pinyin)
+Please read [Hanzi2Pinyin](https://github.com/alyssabedard/Hanzi2Pinyin).
 
 1. Download Note type or use the individual files:
    - Anki Note type (.apkg) can be found [here](https://github.com/alyssabedard/Hanzi2Pinyin-notetype/releases) _(first zip file)_
@@ -30,11 +30,11 @@ Make changes according to your preferences
 ```
 /*****************************
 * CHINESE TEXT STYLES
-* Customize the appearance of Chinese characters and pinyin here
+* Customize the appearance of Chinese characters and pinyin
 ******************************/
 @font-face {
     font-family: 'SourceHanSerif';
-    src: url('_SourceHanSerifSC-Medium.otf') format('opentype'); /* Inside Anki Collection media */
+    src: url('_SourceHanSerifSC-Medium.otf') format('opentype'); /* Add inside Anki Collection media folder */
     /* Optionally add weights */
     /* font-weight: normal;*/
     /* font-style: normal;*/
@@ -48,7 +48,7 @@ Make changes according to your preferences
                 "WenQuanYi Zen Hei",
                 "DroidSansFallback",
                 "Microsoft YaHei",                   /* Windows fallback */
-                serif;
+                "serif";
     font-size: 46px;
 }
 
@@ -61,7 +61,7 @@ Make changes according to your preferences
 
 
 ##  Features
-- Target expression/word are automatically highlighted for easy recognition
+- Target expression/word are automatically highlighted
 - Toggle ruby text:
   - View readings by hovering over specific characters or
   - Toggle button to display/hide all readings at once
