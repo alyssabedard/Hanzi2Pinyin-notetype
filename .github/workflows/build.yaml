@@ -1,4 +1,4 @@
-# After pushing a tag (e.g., v1.0.0), GitHub Actions starts
+# After pushing a tag (e.g., v2025.01.01), GitHub Actions starts
 #   1. It checks out the code at the commit where the tag was created
 #   2. Creates the build package using the latest state (with updated metadata)
 

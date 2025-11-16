@@ -1,26 +1,24 @@
 <!--
 ╭────────────────────────────────────────────────╮
-│        Hanzi2Ruby - Anki Note Type             │
-│                                                │
+│           Hanzi2Ruby - Anki Note Type          │
 │               Bugs/Suggestions?                │
 │  github.com/alyssabedard/Hanzi2Ruby-notetype   │
-│                      v.1.2.0                   │
-│                    💜 2025                     │
+│                  v2025.11.16                   │
 ╰────────────────────────────────────────────────╯
 -->
 
-<!--****************************
+<!--**********************************************
 * FRONT TEMPLATE
-* Main structure for the front side of the card
-*****************************-->
+* Main template for the front side of the card
+***********************************************-->
 
 <!--****************************
 * SENTENCE CARD SECTION
 * Shows when IsSentenceCard is true (if it has any text)
 * Displays Chinese text with pinyin ruby
 *****************************-->
+{{#IsSentenceCard}}
 <div class="sentence-card">
-    {{#IsSentenceCard}}
     <!-- Chinese sentence with pinyin/zhuyin readings -->
     <div lang="zh-Hans" class="sentence-pinyin hanzi-ruby" id="sentence-toggle">
         {{furigana:SentencePinyin}}
@@ -28,20 +26,20 @@
 
     <!-- Pinyin toggle button -->
     <button class="btn" onclick="toggleRuby()">Toggle Pinyin</button>
-    {{/IsSentenceCard}}
 </div>
+{{/IsSentenceCard}}
 
 <!--****************************
 * AUDIO CARD SECTION
 * Shows when IsSentenceCard is false
 * Displays audio player only
 *****************************-->
+{{^IsSentenceCard}}
 <div class="audio-card">
-    {{^IsSentenceCard}}
     <!-- Audio player for sentence -->
     {{SentenceAudio}}
-    {{/IsSentenceCard}}
 </div>
+{{/IsSentenceCard}}
 
 <!--****************************
 * JAVASCRIPT
