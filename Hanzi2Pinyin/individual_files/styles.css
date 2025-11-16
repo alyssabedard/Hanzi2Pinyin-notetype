@@ -1,7 +1,7 @@
-/*****************************
+/************************************************
 * BASIC CARD STYLES
-* Customize the basic appearance of your Anki cards here
-******************************/
+* Customize the basic appearance of your Anki cards
+*************************************************/
 .card {
     font-family: arial;
     font-size: 20px;
@@ -10,19 +10,19 @@
     background-color: white;
 }
 
-/*****************************
+/***********************************************
 * CHINESE TEXT STYLES
 * Customize the appearance of Chinese characters and pinyin here
-******************************/
+************************************************/
 @font-face {
     font-family: 'SourceHanSerif';
-    src: url('_SourceHanSerifSC-Medium.otf') format('opentype'); /* Inside Anki Collection media */
+    src: url('_SourceHanSerifSC-Medium.otf') format('opentype'); /* Add inside Anki Collection media folder */
     /* Optionally add weights */
     /* font-weight: normal;*/
     /* font-style: normal;*/
 }
 .hanzi-ruby {
-    /* Chinese font stack - adjust or add fonts as needed */
+    /* Chinese font stack, adjust or add fonts as needed */
     font-family: "SourceHanSerif", "Kai", "Kaiti SC", "KaiTi", "楷体", /* Primary Chinese fonts*/
                 "STKaiti",                           /* macOS */
                 "NSimSun", "新宋体",                  /* Windows */
@@ -37,46 +37,46 @@
 /* Pinyin text styling */
 ruby rt {
     font-family: "Times New Roman", sans-serif;
-    font-size: 0.5em;                                   /* Adjust size of pinyin text */
+    font-size: 0.5em;                 /* Adjust size of pinyin text */
     user-select: none;
-    opacity: 0;                                         /* Hidden by default */
+    opacity: 0;                       /* Hidden by default */
     font-style: italic;
 }
 
 /* Pinyin interaction styles */
 .hanzi-ruby ruby:hover rt {
-    opacity: 1;                                         /* Show pinyin on hover */
+    opacity: 1;                      /* Show pinyin on hover */
 }
 
 .show-all-ruby rt {
-    opacity: 1 !important;                              /* Force show all pinyin */
+    opacity: 1 !important;           /* Force show all pinyin */
 }
 
-/*****************************
+/***************************************
 * RESPONSIVE CHINESE TEXT
 * Adjust Chinese text size for different screen sizes
-******************************/
+****************************************/
 @media screen and (max-width: 480px) {
     .sentence-pinyin {
-        font-size: 40px;                                /* Size for phones */
+        font-size: 40px;             /* Size for phones */
     }
 }
 
 @media screen and (max-width: 320px) {
     .sentence-pinyin {
-        font-size: 30px;                                /* Size for small phones */
+        font-size: 30px;              /* Size for small phones */
     }
 }
 
-/*****************************
+/*************************************
 * ENGLISH/FRENCH TRANSLATION STYLES
 * Customize the appearance of any secondary language text elements
-******************************/
+**************************************/
 /* Bodoni font stack for English text */
 #translation, #definition, #notes, #source {
     font-family: "Bodoni 72", "Bodoni MT", "Libre Bodoni", 
                 "TeX Gyre Termes", "Baskerville Old Face", 
-                "Baskerville", "Didot", serif;
+                "Baskerville", "Didot", "serif";
 }
 
 /* Translation text */
@@ -95,7 +95,7 @@ ruby rt {
     font-weight: 400;
     font-size: 22px;
     line-height: 1.6;
-    border-left: 3px solid #ddd;                        /* Left border indicator */
+    border-left: 3px solid #ddd;   /* Left border */
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -104,7 +104,7 @@ ruby rt {
 #notes, #source {
     font-size: 16px;
     font-style: italic;
-    color: #666;                                        /* Muted text color */
+    color: #666;
     padding: 10px 0;
     margin-top: 15px;
     padding-top: 15px;
@@ -115,14 +115,14 @@ ruby rt {
 * Customize how images appear in your cards
 ******************************/
 #image {
-    max-width: 90%;                                     /* Responsive image width */
+    max-width: 70%;                /* Responsive image width */
     height: auto;
     margin: 0 auto;
     display: block;
 }
 
 #image img {
-    max-height: 400px;                                  /* Maximum image height */
+    max-height: 400px;            /* Max image height */
     width: auto;
     object-fit: contain;
 }

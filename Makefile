@@ -2,7 +2,7 @@
 
 # Create and push a new tag
 tag:
-	@read -p "Enter version (e.g., 1.0.0): " version; \
+	@read -p "Enter version (e.g., 2025.01.01): " version; \
 	if [ -n "$$version" ]; then \
 		if git rev-parse "v$$version" >/dev/null 2>&1; then \
 			echo "Error: Tag v$$version already exists. Use 'make retag' to recreate it."; \
@@ -20,7 +20,7 @@ tag:
 
 # Delete existing tag and create new one
 retag:
-	@read -p "Enter version (e.g., 1.0.0): " version; \
+	@read -p "Enter version (e.g., 2025.01.01): " version; \
 	if [ -n "$$version" ]; then \
 		echo "Deleting tag v$$version..."; \
 		git push --delete origin "v$$version" 2>/dev/null || echo "Remote tag doesn't exist"; \
